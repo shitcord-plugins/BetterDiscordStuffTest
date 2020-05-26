@@ -1,5 +1,5 @@
 //META{"name":"spotifyLinks", "source": "https://github.com/Strencher/BetterDiscordStuff/blob/master/OpenSpotifylinksInSpotify/OpenSpotifylinksInSpotify.plugin.js", "website": "https://strencher.github.io/BetterDiscordStuff/"}*//
-const { shell } = require('electron');
+const { shell } = require('electron')
 class spotifyLinks {
     getAuthor() {
         return "Strencher";
@@ -8,7 +8,7 @@ class spotifyLinks {
         return "Open SpotifyLinks In Spotify";
     }
     getVersion() {
-        return "0.0.2";
+        return "0.0.3";
     }
     getDescription() {
         return "Opens Spotify links in Spotify. (mini plugin) requires Spotify Desktop App.";
@@ -18,7 +18,11 @@ class spotifyLinks {
             e.preventDefault();
             let url = e.target.href.split("/");
             shell.openExternal(`spotify://${url[3]}/${url[url.length - 1]}`, { activate: true });
-        };
+        } else if(e.target.parentElement.localName == "a" && e.target.parentElement.href.includes("open.spotify.com")) {
+            e.preventDefault();
+            let url = e.target.parentElement.href.split("/");
+            shell.openExternal(`spotify://${url[3]}/${url[url.length - 1]}`, { activate: true });
+        }
     }
     start() {
         document.addEventListener("click", this.event);
