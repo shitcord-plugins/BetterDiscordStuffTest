@@ -299,7 +299,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 			}
 		};
 		var __webpack_modules__ = {
-			793: (module, __webpack_exports__, __webpack_require__) => {
+			265: (module, __webpack_exports__, __webpack_require__) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => __WEBPACK_DEFAULT_EXPORT__
 				});
@@ -315,7 +315,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				StyleLoader.append(module.id, ___CSS_LOADER_EXPORT___.toString());
 				const __WEBPACK_DEFAULT_EXPORT__ = Object.assign(___CSS_LOADER_EXPORT___, ___CSS_LOADER_EXPORT___.locals);
 			},
-			577: (module, __webpack_exports__, __webpack_require__) => {
+			94: (module, __webpack_exports__, __webpack_require__) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => __WEBPACK_DEFAULT_EXPORT__
 				});
@@ -333,7 +333,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				StyleLoader.append(module.id, ___CSS_LOADER_EXPORT___.toString());
 				const __WEBPACK_DEFAULT_EXPORT__ = Object.assign(___CSS_LOADER_EXPORT___, ___CSS_LOADER_EXPORT___.locals);
 			},
-			686: (__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+			892: (__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 				__webpack_require__.r(__webpack_exports__);
 				__webpack_require__.d(__webpack_exports__, {
 					default: () => PronounDB
@@ -4818,7 +4818,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 						};
 					}
 				}
-				var pronouns = __webpack_require__(793);
+				var pronouns = __webpack_require__(265);
 				var pronouns_React = __webpack_require__(832);
 				const components_pronouns = Settings.connectStore(PronounsDB.connect((function Pronoun({
 					data,
@@ -4835,7 +4835,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				})));
 				const external_StyleLoader_namespaceObject = StyleLoader;
 				var external_StyleLoader_default = __webpack_require__.n(external_StyleLoader_namespaceObject);
-				var style = __webpack_require__(577);
+				var style = __webpack_require__(94);
 				const forms_namespaceObject = Modules["@discord/forms"];
 				const createUpdateWrapper = (Component, valueProp = "value", changeProp = "onChange") => props => {
 					const [value, setValue] = external_BdApi_React_default().useState(props[valueProp]);
@@ -4878,7 +4878,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 					});
 				};
 				const hooks_createUpdateWrapper = createUpdateWrapper_createUpdateWrapper;
-				function src_nullishCoalesce(lhs, rhsFn) {
+				function PronounDB_nullishCoalesce(lhs, rhsFn) {
 					if (null != lhs) return lhs;
 					else return rhsFn();
 				}
@@ -4990,7 +4990,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 						const Menus = external_PluginApi_namespaceObject.WebpackModules.findAll((m => _optionalChain([m, "access", _13 => _13.default, "optionalAccess", _14 => _14.displayName, "optionalAccess", _15 => _15.search, "call", _16 => _16(/user.*contextmenu/i)]) > -1));
 						const SelectOptions = Object.entries(Pronouns).reduce(((items, [key, value]) => {
 							items.push({
-								label: src_nullishCoalesce(value, (() => key)),
+								label: PronounDB_nullishCoalesce(value, (() => key)),
 								value: key
 							});
 							return items;
@@ -5132,7 +5132,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				});
 			};
 		})();
-		var __webpack_exports__ = __webpack_require__(686);
+		var __webpack_exports__ = __webpack_require__(892);
 		module.exports.LibraryPluginHack = __webpack_exports__;
 	})();
 	const PluginExports = module.exports.LibraryPluginHack;
